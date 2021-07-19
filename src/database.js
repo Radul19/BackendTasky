@@ -20,10 +20,8 @@ const proConfig = {
 const devConfig = `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}`
 
 // const pool = new Pool(devConfig)
-const pool = new Pool({
-    proConfig
+const pool = new Pool(proConfig)
     // connectionString: process.env.NODE_ENV === 'production' ? proConfig : devConfig
     // connectionString : `postgresql://${process.env.PG_USER}:${process.env.PG_PASSWORD}@${process.env.PG_HOST}:${process.env.PG_PORT}/${process.env.PG_DATABASE}`
-})
 
 module.exports = pool
