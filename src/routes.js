@@ -4,7 +4,7 @@ const router = Router()
 
 const { getTask,getUser ,getDashboard,saveTask,deleteTask,updateTask,registerUser, completeTask,getUserData,pinTask, searchTasks, home} = require('./controller')
 
-router.get('/',home)
+router.get('/try',home)
 
 router.get('/userdata/:id', getUserData)
 
