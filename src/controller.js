@@ -6,6 +6,10 @@ const fs = require('fs')
 
 const Ctr = {}
 
+Ctr.home = (req,res)=>{
+    res.send('hello home page')
+}
+
 Ctr.getUserData = async (req, res) => {
     const { id } = req.params
     const result = await db.query('SELECT * FROM users WHERE id = $1', [id])

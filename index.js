@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes)
 
 
-const port = 3000
+const PORT = process.env.PORT || 4000;
 
 // app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(port, () => console.log(`Example app listening on port 3000!`))
+app.listen(PORT, () => console.log(`Example app listening on port 4000!`))

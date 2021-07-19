@@ -2,7 +2,9 @@ const { Router } = require('express')
 const express = require('express')
 const router = Router()
 
-const { getTask,getUser ,getDashboard,saveTask,deleteTask,updateTask,registerUser, completeTask,getUserData,pinTask, searchTasks} = require('./controller')
+const { getTask,getUser ,getDashboard,saveTask,deleteTask,updateTask,registerUser, completeTask,getUserData,pinTask, searchTasks, home} = require('./controller')
+
+router.get('/try',home)
 
 router.get('/userdata/:id', getUserData)
 
